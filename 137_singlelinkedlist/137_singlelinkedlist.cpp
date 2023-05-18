@@ -45,6 +45,26 @@ void addnode() { // simpan node baru ke linked list
     NodeBaru->next = current;
     previous->next = NodeBaru;
 }
+
+bool serachNode(int nim, Node* current, Node* previous) {
+    previous = START;
+    current = START;
+    while (current != NULL && nim > current->noMhs)
+    {
+        previous = current;
+        current = current->next;
+    }
+
+    if (current == NULL) {
+        return false;
+    }
+    else if (current->noMhs == nim) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 int main()
 {
     std::cout << "Hello World!\n";
