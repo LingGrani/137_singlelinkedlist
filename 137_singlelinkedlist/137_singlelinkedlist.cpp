@@ -134,7 +134,13 @@ int main()
     do //jalankan sekali lalu ulangi ketika while true
     {
         try {// penaganan pengecualian
-
+            cout << "1. Tambah Data" << endl;
+            cout << "2. Hapus Data" << endl;
+            cout << "3. Tampilkan Data" << endl;
+            cout << "4. Cari data" << endl;
+            cout << "5. Keluar" << endl;
+            cout << "Pilihan: " << endl;
+            cin >> pilihan;
         }
         catch () {// lakukan penanganan sesuai apa yang terjadi di try
 
