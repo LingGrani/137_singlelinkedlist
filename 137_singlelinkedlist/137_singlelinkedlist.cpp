@@ -141,6 +141,46 @@ int main()
             cout << "5. Keluar" << endl;
             cout << "Pilihan: " << endl;
             cin >> pilihan;
+            switch (pilihan)
+            {
+            case 1:
+                addnode();
+                cout << "Data Berhasil Ditambahkan" << endl;
+                system("pause");
+                system("cls");
+                break;
+            case 2:
+                if (listEmpty()) {
+                    cout << "list kosong" << endl;
+                    system("pause");
+                    system("cls");
+                    break;
+                }
+                int nim;
+                cout << "Masukan NIM: ";
+                cin >> nim;
+                if (deleteNode()) {
+                    cout << "nim: " << nim << " berhasil dihapus" << endl;
+                    system("pause");
+                    system("cls");
+                }
+                else
+                {
+                    cout << "Data tidak ditemukan" << endl;
+                }
+                break;
+            case 3:
+                traverse();
+                break;
+            case 4:
+                searchData();
+                break;
+            case 5:
+                break;
+            default:
+                cout << "pilihan tidak ada" << endl;
+                break;
+            }
         }
         catch () {// lakukan penanganan sesuai apa yang terjadi di try
 
