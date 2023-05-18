@@ -131,4 +131,8 @@ void searchData() {
 int main()
 {
     int pilihan;
+    do //jalankan sekali lalu ulangi ketika while true
+    {
+
+    } while (true);
 }
