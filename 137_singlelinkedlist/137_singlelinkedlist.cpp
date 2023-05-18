@@ -31,6 +31,19 @@ void addnode() { // simpan node baru ke linked list
 
     node* previous = START;
     node* current = START;
+
+    while ((current != NULL) && (nim >= current->noMhs))
+    {
+        if (nim == current->noMhs) {
+            cout << "NIM sudah ada" << endl;
+            return;
+        }
+        previous = current;
+        current = current->next;
+    }
+
+    NodeBaru->next = current;
+    previous->next = NodeBaru;
 }
 int main()
 {
