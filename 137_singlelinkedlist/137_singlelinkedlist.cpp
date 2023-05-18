@@ -46,7 +46,7 @@ void addnode() { // simpan node baru ke linked list
     previous->next = NodeBaru;
 }
 
-bool serachNode(int nim, Node* current, Node* previous) {
+bool serachNode(int nim, node* current, node* previous) {
     previous = START;
     current = START;
     while (current != NULL && nim > current->noMhs)
@@ -65,6 +65,18 @@ bool serachNode(int nim, Node* current, Node* previous) {
         return false;
     }
 }
+
+bool deleteNode(int nim) {
+    node* current = START;
+    node* previous = START;
+    if (serachNode(nim, previous, current) == false)
+        return false;
+    previous->next = current->next;
+    if (current == START)
+        START = current->next;
+    return true;
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
