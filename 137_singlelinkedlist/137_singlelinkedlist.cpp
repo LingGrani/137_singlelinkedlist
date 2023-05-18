@@ -133,6 +133,11 @@ int main()
     int pilihan;
     do //jalankan sekali lalu ulangi ketika while true
     {
+        try {// penaganan pengecualian
 
+        }
+        catch () {// lakukan penanganan sesuai apa yang terjadi di try
+
+        }
     } while (true);
 }
